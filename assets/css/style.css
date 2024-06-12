@@ -1,0 +1,46 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: black;
+}
+
+.title {
+    font-size: xx-large;
+    text-align: left;
+    margin: 0;
+    margin-right: auto;
+    color: white;
+    padding-left: 5px;
+}
+
+.nav-bar {
+    background-color: black;
+    color: black;
+    margin-right: auto;
+}
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-bar li {
+    font-size: large;
+}
+
+
