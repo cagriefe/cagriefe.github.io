@@ -114,6 +114,11 @@ footer {
     margin-top: auto;
 }
 
+.footer a {
+    color: white;
+    text-decoration: underline;
+}
+
 
 @media (max-width: 700px) {
     .header {
