@@ -138,4 +138,8 @@ footer {
         margin-right: 0;
     }
 
+    .footer {
+        font-size: small;
+    }
+
 }
