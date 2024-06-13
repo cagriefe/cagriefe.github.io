@@ -103,6 +103,36 @@ body {
     text-align: center;
 }
 
+.projects-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.projects-main div {
+    flex-direction: column;
+    flex: 1;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-color: black;
+}
+
+.projects-main img {
+    width: 700px;
+    height: auto;
+    margin-top: 10px;
+}
+
+.projects-main p {
+    color: white;
+    margin: 20px 10px;
+    text-align: center;
+}
+
+
 
 footer {
     color: white;
@@ -136,6 +166,15 @@ footer {
         display: flex;
         font-size: x-small;
         margin-right: 0;
+    }
+
+    .projects-main img {
+        width: 500px;
+        height: auto;
+    }
+
+    .projects-main div {
+        margin: 10px;
     }
 
     .footer {
