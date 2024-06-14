@@ -83,40 +83,6 @@ body {
 }
 
 
-.contact-main {
-    margin-top: 20px;
-}
-
-.contact-main h1 {
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-.contact-main a {
-    color: white;
-    text-decoration: underline;
-}
-
-
-.contact-main ul {
-    list-style-type: none;
-    display: flex;
-    margin: 20px 0px;
-    justify-content: center;
-}
-.contact-main #contact-list {
-    gap: 22px;
-}
-
-.contact-main #contact-img {
-  gap: 20px;
-}
-
-.contact-main #contact-img li {
-    margin: 0px;
-    padding: 0px;
-}
 .projects-main {
     display: flex;
     flex-wrap: wrap;
@@ -160,6 +126,53 @@ body {
     text-align: center;
 }
 
+
+.contact-main {
+    margin-top: 20px;
+}
+
+.contact-main h1 {
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.contact-main a {
+    color: white;
+    text-decoration: underline;
+}
+
+
+.contact-main ul {
+    list-style-type: none;
+    display: flex;
+    margin: 20px 0px;
+    justify-content: center;
+}
+.contact-main #contact-list {
+    gap: 22px;
+}
+
+.contact-main #contact-img {
+  gap: 20px;
+}
+
+.contact-main #contact-img li {
+    margin: 0px;
+    padding: 0px;
+}
+
+.resume-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.resume-main embed{
+    width: 700px;
+    height: 1050px;
+    margin: 0px;
+    margin-top: 10px;
+}
 
 footer {
     color: white;
@@ -215,6 +228,11 @@ footer {
         width: 310px;
         height: auto;
     }
+    .resume-main embed {
+        width: 310px;
+        height: 500px;
+        margin-top: 30px;
+    }
  }
 
 /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
@@ -223,6 +241,12 @@ footer {
         width: 470px;
         height: auto;
     }
+    
+    .resume-main embed {
+        width: 470px;
+        height: 750px;
+        margin-top: 30px;
+    }
 }
 
 /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
@@ -230,6 +254,11 @@ footer {
     .projects-main img {
         width: 630px;
         height: auto;
+    }
+    .resume-main embed {
+        width: 630px;
+        height: 1000px;
+        margin-top: 30px;
     }
 }
 /* tablet, landscape iPad, lo-res laptops ands desktops */
