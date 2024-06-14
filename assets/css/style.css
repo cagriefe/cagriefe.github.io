@@ -61,6 +61,7 @@ body {
 .index-main {
     color: white;
     flex: 1;
+    margin-top: 20px;
 }
 
 .index-main h1 {
@@ -68,11 +69,19 @@ body {
     padding-top: 30px;
     font-weight: bold;
 }
-
+.p-container{
+    max-width: 1500px;
+    margin: 0 auto;
+}
+.p-container a{
+    color: white;
+}
 .index-main p {
     text-align: left;
     padding: 20px 40px 20px 40px;
+    font-size: larger;
 }
+
 
 .contact-main {
     margin-top: 20px;
