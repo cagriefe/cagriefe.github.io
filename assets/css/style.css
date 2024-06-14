@@ -169,7 +169,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
-.resume-main embed{
+.resume-main iframe{
     width: 90%; 
     max-width: 700px; 
     height: 80vh;
@@ -222,7 +222,7 @@ footer {
         font-size: small;
     }
 
-    .resume-main embed {
+    .resume-main iframe {
         width: 90%; 
         height: 70vh;
     }
@@ -235,7 +235,7 @@ footer {
         width: 310px;
         height: auto;
     }
-    .resume-main embed {
+    .resume-main iframe {
         width: 310px;
         height: 500px;
     }
@@ -248,7 +248,7 @@ footer {
         width: 470px;
         height: auto;
     }
-    .resume-main embed {
+    .resume-main iframe {
         width: 470px;
         height: 750px;
     }
@@ -261,7 +261,7 @@ footer {
         width: 630px;
         height: auto;
     }
-    .resume-main embed {
+    .resume-main iframe {
         width: 630px;
         height: 1000px;
     }
@@ -274,7 +274,7 @@ footer {
         width: 700px;
         height: auto;
     }
-    .resume-main embed {
+    .resume-main iframe {
         width: 700px;
         height: 1000px;
     }
@@ -285,7 +285,7 @@ footer {
         width: 700px;
         height: auto;
     }
-    .resume-main embed {
+    .resume-main iframe {
         width: 700px;
         height: 1000px;
     }
@@ -297,7 +297,7 @@ footer {
     width: 700px;
     height: auto;
     }
-    .resume-main embed {
+    .resume-main iframe {
         width: 700px;
         height: 1000px;
     } 
