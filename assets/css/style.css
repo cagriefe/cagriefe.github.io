@@ -89,20 +89,25 @@ body {
     text-decoration: underline;
 }
 
+
 .contact-main ul {
     list-style-type: none;
     display: flex;
-    margin: 40px;
-    gap: 20px;
+    margin: 20px 0px;
     justify-content: center;
-
+}
+.contact-main #contact-list {
+    gap: 22px;
 }
 
-.contact-main li {
-    font-size: larger;
-    text-align: center;
+.contact-main #contact-img {
+  gap: 20px;
 }
 
+.contact-main #contact-img li {
+    margin: 0px;
+    padding: 0px;
+}
 .projects-main {
     display: flex;
     flex-wrap: wrap;
@@ -119,11 +124,25 @@ body {
     border-style: solid;
     border-color: black;
 }
+.projects-main div a {
+    text-decoration: solid;
+    color: white;
+}
 
 .projects-main img {
     width: 700px;
     height: auto;
     margin-top: 10px;
+}
+.projects-main h2 {
+    color: white;
+    font-size: larger;
+    margin-top: 5px;
+}
+
+.projects-main h4 {
+    color: white;
+    margin-bottom: 5px;
 }
 
 .projects-main p {
@@ -131,7 +150,6 @@ body {
     margin: 20px 10px;
     text-align: center;
 }
-
 
 
 footer {
@@ -149,8 +167,7 @@ footer {
     text-decoration: underline;
 }
 
-
-@media (max-width: 700px) {
+@media (max-width:700px) {
     .header {
         display: flex;
         align-items: center;
@@ -168,9 +185,9 @@ footer {
         margin-right: 0;
     }
 
-    .projects-main img {
-        width: 500px;
-        height: auto;
+    .index-main p {
+        text-align: left;
+        padding: 15px 20px 10px 20px;
     }
 
     .projects-main div {
@@ -180,5 +197,49 @@ footer {
     .footer {
         font-size: small;
     }
-
+    
 }
+
+/* smartphones, iPhone, portrait 480x320 phones */ 
+@media (min-width:320px)  {  
+    .projects-main img {
+        width: 310px;
+        height: auto;
+    }
+ }
+
+/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
+@media (min-width:481px)  { 
+    .projects-main img {
+        width: 470px;
+        height: auto;
+    }
+}
+
+/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+@media (min-width:641px)  { 
+    .projects-main img {
+        width: 630px;
+        height: auto;
+    }
+}
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+@media (min-width:961px)  { 
+    .projects-main img {
+        width: 700px;
+        height: auto;
+    }
+ }
+/* big landscape tablets, laptops, and desktops */
+@media (min-width:1025px) { 
+    .projects-main img {
+        width: 700px;
+        height: auto;
+    }
+ }
+
+ /* hi-res laptops and desktops */
+@media (min-width:1281px) { .projects-main img {
+    width: 700px;
+    height: auto;
+} }
