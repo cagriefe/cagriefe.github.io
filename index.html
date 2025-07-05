@@ -1,58 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Cagri Efe</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
-  <link href="assets/css/style.css" rel="stylesheet">
-  <link rel="icon" type=“image/x-icon” href="assets/images/icon.png">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cagri Efe</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <header class="header">
-      <h1 class="title"><a href="index.html">Cagri Efe</a></h1>
-        <nav class="nav-bar">
-          <ul>
-            <li><a href="index.html">Home</a></li> 
-            <li><a href="projects.html">Projects</a></li> 
-            <li><a href="resume.html">Resume</a></li> 
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
+    <!-- Left Sidebar Navigation -->
+    <header class="sidebar">
+        <div class="sidebar-content">
+            <div class="profile-section">
+                <h1 class="name">Çağrı Efe</h1>
+                <h2 class="title">Software Engineer</h2>
+            </div>
+            
+            <nav class="navigation">
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link active">About</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="social-links">
+                <a href="https://github.com/cagriefe" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" fill="currentColor"/>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/cagriefe/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/>
+                    </svg>
+                </a>
+                <a href="mailto:cagriefe34@gmail.com" aria-label="Email">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
     </header>
-    <main class="index-main">
-      <h1>
-        Welcome
-      </h1>
-    <div class="p-container">
-      <p>
-        Hi, I’m Cagri Efe. I’m a passionate and dedicated developer with a solid background in software development. I love working on new technologies and finding solutions to challenging problems. I always strive to learn new things and improve my skills.
-      </p>
-      <p>
-        From an early age, I’ve been fascinated by computers and how they work. This curiosity led me to pursue a career in software development. Over the years, I’ve gained experience in various programming languages and technologies, which has equipped me with a diverse skill set. I enjoy working on both front-end and back-end development, and I’m particularly interested in full-stack development.
-      </p>
-      <p>
-        In addition to my technical skills, I believe in the importance of teamwork and collaboration. I’ve had the opportunity to work on numerous projects with talented individuals, and these experiences have taught me the value of effective communication and problem-solving.
-      </p>
-      <p>
-        Skills and Courses: Python, Java, HTML, CSS, JavaScript, SQL, Git, Github, React.js, Express.js, Node.js, Vue.js, TailWind CSS & Bootstrap 5, Object Oriented Programming, Software Security, Software Engineering, Data Structures and Algorithms, Database Management, Computing Systems, Programming Languages
-      </p>
-      <p>
-        Thank you for visiting my website. Feel free to explore my <a href="projects.html">projects</a> and learn more about me on <a href="contact.html">GitHub or LinkedIn.</a> I’m always open to new opportunities and collaborations.
-      </p>
-      <p>
-        Click for my <a href="resume.html">CV</a>
-      </p>
 
-    </div>
-     
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <!-- About Section -->
+        <section id="about" class="content-section">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="section-content">
+                <p class="about-text">
+                    I'm a software engineer driven by two principles: a deep curiosity for new technologies and a commitment to solving challenging problems. With a solid background in software, I focus on constant improvement to build exceptional solutions that are not just functional.
+                </p>
+                <ul class="tech-list">
+                    <li>Python</li>
+                    <li>Shell Scripting (Bash)</li>
+                    <li>Git & GitHub</li>
+                    <li>Docker</li>
+                    <li>Kubernetes</li>
+                    <li>Ansible</li>
+                    <li>GitHub Actions</li>
+                    <li>Jenkins</li>
+                    <li>AWS / Azure / GCP</li>
+                    <li>Prometheus & Grafana</li>
+                    <li>SQL</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="content-section">
+            <div class="section-header">
+                <h2 class="section-title">Experiences</h2>
+            </div>
+            <div class="section-content">
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3 class="job-title">DevOps Engineer @ Encore</h3>
+                        <span class="job-dates">2025 - Present</span>
+                    </div>
+                    <ul class="job-description">
+                        <li>Automate software delivery processes.</li>
+                        <li>Manage and maintain cloud infrastructure, including server provisioning, monitoring, and scaling.</li>
+                        <li>Implement infrastructure as code to ensure consistent and reproducible deployments.</li>
+                        <li>Monitor system performance and troubleshoot issues</li>
+                        <li>Collaborate with development teams to optimize application deployment and improve overall system reliability.</li>
+                    </ul>
+                </div>
+            
+
+        <!-- Projects Section -->
+        <!-- 
+        <section id="projects" class="content-section">
+            <div class="section-header">
+                <h2 class="section-title">Things I've Built</h2>
+            </div>
+            <div class="section-content">
+                <div class="project-item">
+                    <h3 class="project-title">GPA Calculator</h3>
+                    <p class="project-description">
+                        A comprehensive Java application for calculating Grade Point Average (GPA) of students. Features student information management, course details input, and automatic GPA calculation with a clean, user-friendly interface.
+                    </p>
+                    <ul class="project-tech">
+                        <li>Java</li>
+                        <li>Swing GUI</li>
+                        <li>Object-Oriented Programming</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/cagriefe/GpaCalculator" class="project-link" target="_blank" rel="noopener noreferrer">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" fill="currentColor"/>
+                            </svg>
+                            Source Code
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-item">
+                    <h3 class="project-title">Crypto Wallet Management System</h3>
+                    <p class="project-description">
+                        A secure and intuitive cryptocurrency wallet management application that allows users to track multiple cryptocurrencies, view real-time market data, and manage their digital assets with advanced security features.
+                    </p>
+                    <ul class="project-tech">
+                        <li>JavaScript</li>
+                        <li>React.js</li>
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                        <li>REST APIs</li>
+                        <li>CSS</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/cagriefe" class="project-link" target="_blank" rel="noopener noreferrer">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" fill="currentColor"/>
+                            </svg>
+                            Source Code
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-item">
+                    <h3 class="project-title">Digital PhoneBook Application</h3>
+                    <p class="project-description">
+                        A modern contact management system built with full CRUD functionality. Features include contact search, categorization, backup/restore capabilities, and a responsive design that works seamlessly across all devices.
+                    </p>
+                    <ul class="project-tech">
+                        <li>Python</li>
+                        <li>SQL</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Bootstrap</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/cagriefe" class="project-link" target="_blank" rel="noopener noreferrer">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" fill="currentColor"/>
+                            </svg>
+                            Source Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        -->
+
+        <!-- Contact Section -->
+        <section id="contact" class="content-section">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+            </div>
+            <div class="section-content">
+                <p class="contact-text">
+                    My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you! Feel free to reach out via email.
+                </p>
+                <a href="mailto:cagriefe34@gmail.com" class="contact-button">
+                    Email Me
+                </a>
+            </div>
+        </section>
     </main>
-    <footer class="footer">
-      <p>&copy; 2024 Cagri Efe. All rights reserved.</p>
-      <p>This website's code is licensed under the <a href="LICENSE">MIT License</a>.</p>
-    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
