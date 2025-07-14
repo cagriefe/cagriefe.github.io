@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flotrix - Game Guide & Documentation</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../../assets/images/icon.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../assets/images/icon.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../assets/images/icon.png">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .game-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            color: var(--lightest-slate);
+            line-height: 1.6;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: var(--green);
+            text-decoration: none;
+            font-size: var(--fz-sm);
+            transition: var(--transition);
+        }
+        
+        .back-link:hover {
+            color: var(--lightest-slate);
+        }
+        
+        .back-link::before {
+            content: "← ";
+        }
+        
+        .game-header {
+            text-align: center;
+            margin-bottom: 60px;
+            background: linear-gradient(135deg, var(--light-navy) 0%, var(--lightest-navy) 100%);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--lightest-navy);
+        }
+        
+        .game-title {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--lightest-slate);
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
+        }
+        
+        .game-subtitle {
+            font-size: var(--fz-xl);
+            color: var(--green);
+            margin-bottom: 20px;
+        }
+        
+        .game-description {
+            font-size: var(--fz-lg);
+            color: var(--slate);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .toc {
+            background: var(--light-navy);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--lightest-navy);
+            margin-bottom: 40px;
+        }
+        
+        .toc-title {
+            font-size: var(--fz-xl);
+            font-weight: 600;
+            color: var(--green);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .toc-link {
+            color: var(--slate);
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+        
+        .toc-link:hover {
+            color: var(--green);
+            background: var(--green-tint);
+            border-color: var(--green);
+        }
+        
+        .section {
+            margin-bottom: 50px;
+        }
+        
+        .section-heading {
+            font-size: var(--fz-xxl);
+            font-weight: 600;
+            color: var(--lightest-slate);
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .section-heading::before {
+            content: "🎮";
+            position: absolute;
+            left: 0;
+            font-size: 24px;
+        }
+        
+        .subsection-heading {
+            font-size: var(--fz-xl);
+            font-weight: 600;
+            color: var(--green);
+            margin: 30px 0 15px 0;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .subsection-heading::before {
+            content: "▶";
+            position: absolute;
+            left: 0;
+            color: var(--green);
+            font-size: 16px;
+        }
+        
+        .content-text {
+            margin-bottom: 15px;
+            color: var(--slate);
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .feature-card {
+            background: var(--light-navy);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--lightest-navy);
+            transition: var(--transition);
+        }
+        
+        .feature-card:hover {
+            border-color: var(--green);
+            transform: translateY(-2px);
+        }
+        
+        .feature-title {
+            color: var(--green);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .controls-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: var(--light-navy);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            border: 1px solid var(--lightest-navy);
+        }
+        
+        .controls-table th,
+        .controls-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--lightest-navy);
+        }
+        
+        .controls-table th {
+            background: var(--lightest-navy);
+            color: var(--green);
+            font-weight: 600;
+        }
+        
+        .controls-table td {
+            color: var(--slate);
+        }
+        
+        .controls-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .tetrimino-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .tetrimino-item {
+            background: var(--light-navy);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--lightest-navy);
+            text-align: center;
+        }
+        
+        .tetrimino-name {
+            color: var(--green);
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .tetrimino-desc {
+            color: var(--slate);
+            font-size: var(--fz-sm);
+        }
+        
+        .scoring-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .scoring-list li {
+            background: var(--light-navy);
+            margin: 10px 0;
+            padding: 15px 20px;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--lightest-navy);
+            border-left: 4px solid var(--green);
+        }
+        
+        .scoring-list strong {
+            color: var(--green);
+        }
+        
+        .tips-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .tips-list li {
+            background: var(--green-tint);
+            margin: 10px 0;
+            padding: 15px 20px;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--green);
+            position: relative;
+            padding-left: 50px;
+        }
+        
+        .tips-list li::before {
+            content: "💡";
+            position: absolute;
+            left: 20px;
+            font-size: 18px;
+        }
+        
+        .highlight {
+            color: var(--green);
+            font-weight: 600;
+        }
+        
+        .warning-box {
+            background: rgba(245, 125, 255, 0.1);
+            border: 1px solid var(--pink);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .warning-title {
+            color: var(--pink);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .contact-section {
+            background: var(--light-navy);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--lightest-navy);
+            text-align: center;
+        }
+        
+        .contact-title {
+            color: var(--green);
+            font-size: var(--fz-xl);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .contact-link {
+            color: var(--green);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .contact-link:hover {
+            color: var(--lightest-slate);
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 30px;
+            border-top: 1px solid var(--lightest-navy);
+            color: var(--slate);
+        }
+        
+        .emoji {
+            font-size: 1.2em;
+        }
+        
+        @media (max-width: 768px) {
+            .game-container {
+                padding: 30px 15px;
+            }
+            
+            .game-title {
+                font-size: 36px;
+            }
+            
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .tetrimino-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .controls-table {
+                font-size: var(--fz-sm);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <a href="../../" class="back-link">Back to Home</a>
+        
+        <div class="game-header">
+            <h1 class="game-title"><span class="emoji">🎮</span> Flotrix</h1>
+            <p class="game-subtitle">Modern Experience</p>
+            <p class="game-description">
+                Experience the timeless puzzle gameplay with stunning neon visuals, smooth animations, and professional scoring mechanics.
+            </p>
+        </div>
+
+        <div class="toc">
+            <h2 class="toc-title">📋 Quick Navigation</h2>
+            <div class="toc-grid">
+                <a href="#features" class="toc-link">🌟 Features</a>
+                <a href="#how-to-play" class="toc-link">🎯 How to Play</a>
+                <a href="#controls" class="toc-link">🎮 Controls</a>
+                <a href="#tetriminos" class="toc-link">🧩 Tetrimino Types</a>
+                <a href="#scoring" class="toc-link">🏆 Scoring System</a>
+                <a href="#getting-started" class="toc-link">🚀 Getting Started</a>
+                <a href="#troubleshooting" class="toc-link">🆘 Troubleshooting</a>
+                <a href="#tips" class="toc-link">💡 Pro Tips</a>
+                <a href="#contact" class="toc-link">📞 Contact</a>
+            </div>
+        </div>
+
+        <section id="features" class="section">
+            <h2 class="section-heading">Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-title">Classic Gameplay</div>
+                    <p>Modern enhancements to the timeless puzzle experience</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-title">Stunning Neon Visuals</div>
+                    <p>Beautiful vibrant colors and smooth animations</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-title">Professional Scoring</div>
+                    <p>Following official guidelines with advanced features</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-title">Advanced Features</div>
+                    <p>Hold piece, ghost piece, and combo system</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-title">High Score Tracking</div>
+                    <p>Persistent storage of your best performances</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-title">Touch Optimized</div>
+                    <p>Responsive controls designed for mobile devices</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-to-play" class="section">
+            <h2 class="section-heading">How to Play</h2>
+            
+            <div id="controls" class="subsection">
+                <h3 class="subsection-heading">Basic Controls</h3>
+                <table class="controls-table">
+                    <thead>
+                        <tr>
+                            <th>Action</th>
+                            <th>Control</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Move Left/Right</strong></td>
+                            <td>Swipe or tap left/right arrows</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Rotate</strong></td>
+                            <td>Tap the piece or rotation button</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Soft Drop</strong></td>
+                            <td>Swipe down</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hard Drop</strong></td>
+                            <td>Double-tap or hard drop button</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hold Piece</strong></td>
+                            <td>Tap hold button</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pause</strong></td>
+                            <td>Tap pause button</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="tetriminos" class="subsection">
+                <h3 class="subsection-heading">Tetrimino Types</h3>
+                <div class="tetrimino-grid">
+                    <div class="tetrimino-item">
+                        <div class="tetrimino-name">I-Piece (Cyan)</div>
+                        <div class="tetrimino-desc">The long straight piece, perfect for Tetrises</div>
+                    </div>
+                    <div class="tetrimino-item">
+                        <div class="tetrimino-name">O-Piece (Yellow)</div>
+                        <div class="tetrimino-desc">The square block</div>
+                    </div>
+                    <div class="tetrimino-item">
+                        <div class="tetrimino-name">T-Piece (Magenta)</div>
+                        <div class="tetrimino-desc">T-shaped piece, great for T-spins</div>
+                    </div>
+                    <div class="tetrimino-item">
+                        <div class="tetrimino-name">S-Piece (Green)</div>
+                        <div class="tetrimino-desc">S-shaped piece</div>
+                    </div>
+                    <div class="tetrimino-item">
+                        <div class="tetrimino-name">Z-Piece (Red)</div>
+                        <div class="tetrimino-desc">Z-shaped piece</div>
+                    </div>
+                    <div class="tetrimino-item">
+                        <div class="tetrimino-name">J-Piece (Blue)</div>
+                        <div class="tetrimino-desc">L-shaped piece (left)</div>
+                    </div>
+                    <div class="tetrimino-item">
+                        <div class="tetrimino-name">L-Piece (Orange)</div>
+                        <div class="tetrimino-desc">L-shaped piece (right)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-heading">Special Features</h3>
+                
+                <div class="feature-card" style="margin-bottom: 20px;">
+                    <div class="feature-title">🔄 Hold System</div>
+                    <ul style="list-style: none; margin: 10px 0;">
+                        <li style="margin: 5px 0; color: var(--slate);">• Hold a piece for later use</li>
+                        <li style="margin: 5px 0; color: var(--slate);">• Hold button available on the left side</li>
+                        <li style="margin: 5px 0; color: var(--slate);">• Can only hold once per piece drop</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card" style="margin-bottom: 20px;">
+                    <div class="feature-title">👻 Ghost Piece</div>
+                    <ul style="list-style: none; margin: 10px 0;">
+                        <li style="margin: 5px 0; color: var(--slate);">• Shows where your piece will land</li>
+                        <li style="margin: 5px 0; color: var(--slate);">• Helps with precise placement</li>
+                        <li style="margin: 5px 0; color: var(--slate);">• Automatically appears below your active piece</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-title">⚡ Hard Drop</div>
+                    <ul style="list-style: none; margin: 10px 0;">
+                        <li style="margin: 5px 0; color: var(--slate);">• Instantly drops piece to bottom</li>
+                        <li style="margin: 5px 0; color: var(--slate);">• Earns bonus points (2 points per row dropped)</li>
+                        <li style="margin: 5px 0; color: var(--slate);">• Double-tap or use hard drop button</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="scoring" class="section">
+            <h2 class="section-heading">Scoring System</h2>
+            <p class="content-text">Flotrix uses the official scoring guidelines:</p>
+            
+            <div class="subsection">
+                <h3 class="subsection-heading">Line Clear Scoring</h3>
+                <ul class="scoring-list">
+                    <li><strong>Single</strong> (1 line): 100 × Level</li>
+                    <li><strong>Double</strong> (2 lines): 300 × Level</li>
+                    <li><strong>Triple</strong> (3 lines): 500 × Level</li>
+                    <li><strong>Tetris</strong> (4 lines): 800 × Level</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-heading">Bonus Points</h3>
+                
+                <div class="feature-card" style="margin-bottom: 15px;">
+                    <div class="feature-title">🔥 Back-to-Back Bonus</div>
+                    <p>+50% bonus for consecutive difficult clears (Tetris)</p>
+                </div>
+
+                <div class="feature-card" style="margin-bottom: 15px;">
+                    <div class="feature-title">⚡ Combo System</div>
+                    <p>Bonus for clearing lines consecutively</p>
+                    <p><strong>Formula:</strong> 50 × (combo count - 1) × Level</p>
+                </div>
+
+                <div class="feature-card" style="margin-bottom: 15px;">
+                    <div class="feature-title">✨ Perfect Clear</div>
+                    <p>Massive bonus for clearing entire board (rare but extremely rewarding)</p>
+                </div>
+
+                <ul class="scoring-list">
+                    <li><strong>💨 Soft Drop:</strong> 1 point per row</li>
+                    <li><strong>⬇️ Hard Drop:</strong> 2 points per row</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-heading">Leveling Up</h3>
+                <ul style="list-style: none; margin: 20px 0;">
+                    <li style="margin: 8px 0; color: var(--slate);">• <span class="highlight">Level increases</span> every 10 lines cleared</li>
+                    <li style="margin: 8px 0; color: var(--slate);">• <span class="highlight">Speed increases</span> with each level</li>
+                    <li style="margin: 8px 0; color: var(--slate);">• <span class="highlight">Score multiplier</span> increases with level</li>
+                    <li style="margin: 8px 0; color: var(--slate);">• <span class="highlight">Maximum level:</span> 15</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="getting-started" class="section">
+            <h2 class="section-heading">Getting Started</h2>
+            
+            <div class="subsection">
+                <h3 class="subsection-heading">Installation</h3>
+                <ol style="margin: 20px 0; padding-left: 30px; color: var(--slate);">
+                    <li style="margin: 10px 0;">Download Flotrix from the App Store</li>
+                    <li style="margin: 10px 0;">Launch the game</li>
+                    <li style="margin: 10px 0;">Tap "Start Game" to begin your journey!</li>
+                </ol>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-heading">First Time Playing?</h3>
+                <ul class="tips-list">
+                    <li>Start with the tutorial to learn basic controls</li>
+                    <li>Practice soft drops before attempting hard drops</li>
+                    <li>Use the hold feature strategically</li>
+                    <li>Watch the ghost piece for better placement</li>
+                    <li>Go for Tetrises when possible for maximum points</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="troubleshooting" class="section">
+            <h2 class="section-heading">Troubleshooting</h2>
+            
+            <div class="warning-box">
+                <div class="warning-title">⚠️ Common Issues</div>
+                <p class="content-text">Here are solutions to the most frequently reported problems:</p>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-heading">Game is Running Slowly</h3>
+                <ul style="list-style: none; margin: 20px 0;">
+                    <li style="margin: 8px 0; color: var(--slate);">• Close other apps running in background</li>
+                    <li style="margin: 8px 0; color: var(--slate);">• Restart your device if performance issues persist</li>
+                    <li style="margin: 8px 0; color: var(--slate);">• Ensure iOS is updated to latest version</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-heading">Controls Feel Unresponsive</h3>
+                <ul style="list-style: none; margin: 20px 0;">
+                    <li style="margin: 8px 0; color: var(--slate);">• Make sure screen is clean</li>
+                    <li style="margin: 8px 0; color: var(--slate);">• Restart the app</li>
+                    <li style="margin: 8px 0; color: var(--slate);">• Use lighter taps for better response</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-heading">Performance Tips</h3>
+                <ul class="tips-list">
+                    <li>Close background apps for optimal performance</li>
+                    <li>Keep iOS updated for best compatibility</li>
+                    <li>Free up storage space if experiencing lag</li>
+                    <li>Restart device periodically for smooth gameplay</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-heading">Compatibility</h3>
+                <div class="feature-card">
+                    <ul style="list-style: none; margin: 10px 0;">
+                        <li style="margin: 8px 0; color: var(--slate);"><strong>iOS Requirements:</strong> iOS 13.0 or later</li>
+                        <li style="margin: 8px 0; color: var(--slate);"><strong>Devices:</strong> iPhone, iPad, iPod touch</li>
+                        <li style="margin: 8px 0; color: var(--slate);"><strong>Storage:</strong> ~50MB required</li>
+                        <li style="margin: 8px 0; color: var(--slate);"><strong>Internet:</strong> Not required for gameplay</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="tips" class="section">
+            <h2 class="section-heading">Tips for High Scores</h2>
+            
+            <div class="subsection">
+                <h3 class="subsection-heading">Advanced Strategies</h3>
+                <ul class="tips-list">
+                    <li><strong>Master the Hold System:</strong> Save I-pieces for Tetris opportunities, use hold strategically</li>
+                    <li><strong>Build for Tetrises:</strong> Keep one column open for I-pieces, stack pieces 4 rows high</li>
+                    <li><strong>Combo Management:</strong> Clear lines consecutively for combo bonuses</li>
+                    <li><strong>Speed vs Accuracy:</strong> Focus on clean play over pure speed</li>
+                    <li><strong>Level Management:</strong> Higher levels = more points per line</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-heading">Pro Tips</h3>
+                <ul class="tips-list">
+                    <li>Use ghost piece for precise placement</li>
+                    <li>Plan 2-3 pieces ahead using the next piece preview</li>
+                    <li>Practice T-spins for advanced scoring (future update)</li>
+                    <li>Keep the board low to avoid quick game overs</li>
+                    <li>Save perfect clear opportunities when possible</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="contact-section">
+                <h2 class="contact-title">📞 Contact & Support</h2>
+                <p class="content-text">
+                    <strong>Developer:</strong> Çağrı Efe<br>
+                    <strong>Website:</strong> <a href="https://www.cagriefe.com" class="contact-link" target="_blank">cagriefe.com</a><br>
+                    <strong>Privacy Policy:</strong> <a href="../" class="contact-link">Privacy Policy</a>
+                </p>
+                <p class="content-text">
+                    For technical support, bug reports, or feature suggestions, please visit the website and use the contact form.
+                </p>
+            </div>
+        </section>
+
+        <div class="footer">
+            <p><strong>🎉 Thank You for Playing!</strong></p>
+            <p>Thank you for choosing Flotrix! Keep practicing, achieve those high scores, and most importantly - have fun!</p>
+            <p style="margin-top: 20px;"><strong>Happy Gaming! 🎮</strong></p>
+            <hr style="border: none; border-top: 1px solid var(--lightest-navy); margin: 30px 0;">
+            <p><strong>Flotrix - Where Classic Meets Modern</strong></p>
+            <p>© 2025 Çağrı Efe. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html> 
