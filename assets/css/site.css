@@ -242,6 +242,7 @@ h1, h2, h3 { line-height: 1.2; margin: 0; }
   border-radius: var(--radius);
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
+.project-wide { grid-column: 1 / -1; }
 .project:hover {
   border-color: var(--accent);
   box-shadow: 0 4px 16px rgba(2, 132, 199, 0.08);

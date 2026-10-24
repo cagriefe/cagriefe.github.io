@@ -66,7 +66,7 @@
             <h2>About</h2>
             <p class="lead">Software engineer and Project Lead for the XLR Platform at Encore, an NCR Voyix partner. I ship next-gen point-of-sale rollouts for Turkey's largest retailers — Migros, CarrefourSA and Gratis.</p>
             <p>Most of my work happens where software meets the store floor: .NET services on self-checkout lanes, payment and fiscal device layers, edge Kubernetes clusters running in the back office, and the telemetry that tells us when any of it breaks.</p>
-            <p>After hours I build products end to end: a live storefront and quoting system for an HVAC dealer, a self-running short-video studio on a home Kubernetes cluster, and iOS apps for the road and for fun.</p>
+            <p>After hours I build products end to end: an open-source MCP server that lets AI agents drive a real iPhone, a live storefront and quoting system for an HVAC dealer, a self-running short-video studio on a home Kubernetes cluster, and iOS apps — one of them on the App Store.</p>
           </section>
 
           <section class="stats" aria-label="Highlights">
@@ -132,6 +132,18 @@
 
             <h3 class="subhead">Built &amp; shipped</h3>
             <div class="grid">
+              <article class="project project-wide">
+                <div class="project-top">
+                  <div class="project-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 2.5h8a1.5 1.5 0 0 1 1.5 1.5v16a1.5 1.5 0 0 1-1.5 1.5H8A1.5 1.5 0 0 1 6.5 20V4A1.5 1.5 0 0 1 8 2.5zM10.5 18.5h3M10 9l2 2 3-3"/></svg></div>
+                  <span class="status status-live"><span class="dot"></span>Open source</span>
+                </div>
+                <h3>phoneos</h3>
+                <p class="project-tag">Phone use for AI agents · 2026</p>
+                <p>What computer use is for the desktop, on a real iPhone. An MCP server that lets Claude Code, Codex, Cursor or Gemini see the screen, tap, swipe and type in any app — no jailbreak. Every screen becomes a compact list of elements with short ids, so the agent taps by meaning instead of guessing pixels. It can unlock the phone, hop between apps to fetch a one-time code, and test your own builds with logs, crash reports and a screenshot of every step — pausing to ask before anything it can't undo.</p>
+                <ul class="tags"><li>TypeScript</li><li>MCP</li><li>WebDriverAgent</li><li>iOS</li><li>AI agents</li></ul>
+                <a class="project-link" href="https://github.com/mbatinefe/phoneos" target="_blank" rel="noopener">View on GitHub ↗</a>
+              </article>
+
               <article class="project">
                 <div class="project-top">
                   <div class="project-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 10.5 12 4l9 6.5M5 9v11h14V9M9 20v-6h6v6"/></svg></div>
@@ -161,7 +173,7 @@
                   <span class="status">Capstone</span>
                 </div>
                 <h3>Draw Machine</h3>
-                <p class="project-tag">Champions League draw optimizer · 2024</p>
+                <p class="project-tag">Champions League draw optimizer · 2025–26</p>
                 <p>Models the new 36-team league-phase format as an integer program: every club gets eight opponents across four pots, with country clashes and home/away balance enforced as hard constraints. Gurobi finds a valid draw; ClubElo ratings feed fairness benchmarks; a SwiftUI app plays it out live.</p>
                 <ul class="tags"><li>Gurobi</li><li>FastAPI</li><li>PostgreSQL</li><li>Alembic</li><li>Firebase Auth</li><li>SwiftUI</li></ul>
                 <a class="project-link" href="https://github.com/cagriefe/ChampionsLeagueCapstone" target="_blank" rel="noopener">View on GitHub ↗</a>
@@ -170,7 +182,7 @@
               <article class="project">
                 <div class="project-top">
                   <div class="project-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 14h4v4H4zM8 14h4v4H8zM12 10h4v4h-4zM12 14h4v4h-4zM16 6h4v4h-4z"/></svg></div>
-                  <span class="status">iOS</span>
+                  <span class="status status-live"><span class="dot"></span>On the App Store</span>
                 </div>
                 <h3>Flotrix</h3>
                 <p class="project-tag">Neon puzzle game · 2025</p>
@@ -182,6 +194,17 @@
 
             <h3 class="subhead">In the lab</h3>
             <div class="grid">
+              <article class="project project-wide">
+                <div class="project-top">
+                  <div class="project-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="7" ry="2.5"/><path d="M5 5.5v6c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5v-6M5 11.5v6c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5v-6"/></svg></div>
+                  <span class="status status-wip"><span class="dot"></span>In progress</span>
+                </div>
+                <h3>mneme</h3>
+                <p class="project-tag">Local memory for AI tools · 2026</p>
+                <p>A perfect memory of everything you've seen and heard on your computer, kept entirely on your own machine. It reads screen text from accessibility trees with OCR as a fallback, transcribes audio and tells speakers apart, logs clicks and keystrokes, and indexes it all into SQLite full-text search — then hands it to AI tools as context through a local API and an MCP server.</p>
+                <ul class="tags"><li>Rust</li><li>Tauri</li><li>Next.js</li><li>SQLite FTS</li><li>Whisper</li><li>MCP</li></ul>
+              </article>
+
               <article class="project">
                 <div class="project-top">
                   <div class="project-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM4 9h16M8 5l2 4M13 5l2 4M10 12v5l4-2.5z"/></svg></div>
