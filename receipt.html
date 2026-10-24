@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Çağrı Efe — Software Engineer</title>
+  <meta name="description" content="Çağrı Efe is a software engineer in Istanbul. Project Lead for the XLR Platform at Encore (NCR Voyix Partner). .NET, edge Kubernetes, POS and self-checkout systems.">
+  <link rel="canonical" href="https://www.cagriefe.com/receipt.html">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+  <link rel="icon" type="image/png" href="assets/images/icon.png" sizes="512x512">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Çağrı Efe",
+    "jobTitle": "Software Engineer",
+    "address": { "@type": "PostalAddress", "addressLocality": "Istanbul", "addressCountry": "TR" },
+    "email": "mailto:cagriefe34@gmail.com",
+    "url": "https://www.cagriefe.com",
+    "sameAs": ["https://github.com/cagriefe", "https://www.linkedin.com/in/cagriefe/"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <main id="main" class="receipt" aria-label="Receipt">
+    <!-- Store header -->
+    <header class="masthead">
+      <p class="store-name">CAGRI&nbsp;EFE</p>
+      <p>SOFTWARE ENGINEER — ISTANBUL, TR</p>
+      <p>
+        <a href="mailto:cagriefe34@gmail.com">cagriefe34@gmail.com</a><br>
+        <a href="https://github.com/cagriefe" target="_blank" rel="noopener">github.com/cagriefe</a> ·
+        <a href="https://www.linkedin.com/in/cagriefe/" target="_blank" rel="noopener">linkedin.com/in/cagriefe</a>
+      </p>
+      <p class="stamp" aria-label="Currently in production">★ IN PRODUCTION ★</p>
+    </header>
+
+    <hr class="perf" aria-hidden="true">
+
+    <p class="meta-line"><span>NO 000001</span><span>CLERK: CAGRI</span><span id="receipt-date">—</span></p>
+
+    <hr class="perf" aria-hidden="true">
+
+    <!-- Contents -->
+    <nav class="contents" aria-label="Contents">
+      <p class="block-title">CONTENTS</p>
+      <ol>
+        <li><a href="#experience">EXPERIENCE</a><span class="fill" aria-hidden="true"></span><span>01</span></li>
+        <li><a href="#projects">PROJECTS</a><span class="fill" aria-hidden="true"></span><span>02</span></li>
+        <li><a href="#skills">SKILLS</a><span class="fill" aria-hidden="true"></span><span>03</span></li>
+        <li><a href="#education">EDUCATION</a><span class="fill" aria-hidden="true"></span><span>04</span></li>
+        <li><a href="#contact">CONTACT</a><span class="fill" aria-hidden="true"></span><span>05</span></li>
+      </ol>
+    </nav>
+
+    <hr class="perf" aria-hidden="true">
+
+    <!-- Experience -->
+    <section id="experience">
+      <h2>*** EXPERIENCE ***</h2>
+      <p class="employer">ENCORE — NCR VOYIX PARTNER, ISTANBUL</p>
+
+      <p class="row"><span>SOFTWARE ENGINEER, XLR PLATFORM</span><span class="fill" aria-hidden="true"></span><span>SEP 26 –</span></p>
+      <ul>
+        <li>Technical delivery + architecture for XLR next-gen POS rollouts: Migros, CarrefourSA, Gratis.</li>
+        <li>Edge Kubernetes in stores: custom Helm charts, scheduled pod-restart jobs, Citrix images for Control Plane + Touchpoint clusters.</li>
+        <li>Deploy &amp; recovery on on-prem CX5 hardware: PXE boot, ISO/USB sideloading.</li>
+        <li>Direct line to NCR Voyix global teams on releases and critical patches.</li>
+      </ul>
+
+      <p class="row"><span>SOFTWARE ENGINEER</span><span class="fill" aria-hidden="true"></span><span>JUL 24 – SEP 26</span></p>
+      <ul>
+        <li>Moved self-checkout + fixed-lane POS services to self-contained .NET 8.</li>
+        <li>Standard .NET 8 EFT/payment and fiscal layers across store fleets (Ingenico, Verifone, Pavo).</li>
+        <li>Built Sentinel telemetry: 6,000+ on-prem devices syncing via local SQLite transactional outbox.</li>
+        <li>Sync-health monitors + dead-letter alerts for daily cross-store ingestion.</li>
+        <li>Kept StoreTool (remote admin) alive: .NET Framework migration, VNC monitoring, diagnostics.</li>
+      </ul>
+
+      <p class="row"><span>INTERN</span><span class="fill" aria-hidden="true"></span><span>JAN 24 – JUL 24</span></p>
+      <ul>
+        <li>Monitoring utilities, MSI packaging, log-diagnostic scripts (C# / .NET).</li>
+        <li>Debugged FLPOS transaction failures + EFT timeouts in staging.</li>
+      </ul>
+    </section>
+
+    <hr class="perf" aria-hidden="true">
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2>*** PROJECTS ***</h2>
+
+      <p class="row"><span>SENTINEL TELEMETRY</span><span class="fill" aria-hidden="true"></span><span>2024–26</span></p>
+      <p class="desc">Sidecar service for 6,000+ live devices. Events journaled in SQLite, retried via outbox, watched by dead-letter monitors.</p>
+      <p class="stack">STACK: .NET 9, SQLITE, DOCKER, HELM, MSI</p>
+
+      <p class="row"><span>EFT + FISCAL INTERFACE</span><span class="fill" aria-hidden="true"></span><span>2024–26</span></p>
+      <p class="desc">One hardware layer between POS logic and payment/fiscal devices. New terminal, no checkout rewrite.</p>
+      <p class="stack">STACK: .NET 8, C#, FLPOS</p>
+
+      <p class="row"><span>DRAW MACHINE</span><span class="fill" aria-hidden="true"></span><span>2024</span></p>
+      <p class="desc">Side project. Optimizes Champions League–style draws under constraint rules. SwiftUI up front, integer programming behind.</p>
+      <p class="stack">STACK: SWIFTUI, FASTAPI, GUROBI</p>
+    </section>
+
+    <hr class="perf" aria-hidden="true">
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2>*** SKILLS ***</h2>
+      <p><span class="k">LANGS</span> — C#, PYTHON, JS, JAVA, SQL, HTML/CSS</p>
+      <p><span class="k">BACKEND</span> — .NET 8/CORE, .NET FW, ASP.NET, FASTAPI, FLASK, DJANGO, NODE</p>
+      <p><span class="k">EDGE/POS</span> — POS/SCO, FLPOS, FISCAL, EFT (INGENICO, VERIFONE, PAVO), MSI, PXE</p>
+      <p><span class="k">INFRA</span> — K8S, HELM, DOCKER, RABBITMQ, POSTGRES, SQLITE OUTBOX, CI/CD, GIT</p>
+      <p><span class="k">SPOKEN</span> — TURKISH (NATIVE), ENGLISH (FLUENT)</p>
+    </section>
+
+    <hr class="perf" aria-hidden="true">
+
+    <!-- Education -->
+    <section id="education">
+      <h2>*** EDUCATION ***</h2>
+      <p><span class="k">B.SC.</span> — SOFTWARE ENG., BAHCESEHIR UNIV., ISTANBUL</p>
+      <p><span class="k">HIGH SCH.</span> — KOY HIZMETLERI ANATOLIAN, TOP 2.4% NATIONWIDE</p>
+      <p><span class="k">EXTRAS</span> — IBM BACKEND/FRONTEND TRACKS; JAVA + REQUIREMENTS COURSEWORK (COLORADO / LEARNQUEST / GOOGLE)</p>
+      <p><span class="k">J-1</span> — WORK &amp; TRAVEL, MASSACHUSETTS, SUMMERS 2022 + 2023</p>
+    </section>
+
+    <hr class="perf" aria-hidden="true">
+
+    <!-- Contact / total -->
+    <section id="contact">
+      <h2>*** CONTACT ***</h2>
+      <p class="row total"><span>TOTAL DUE: 1 × EMAIL</span></p>
+      <p class="pay"><a href="mailto:cagriefe34@gmail.com">cagriefe34@gmail.com</a></p>
+      <p class="desc">Usually replies within a day or two. Logs attached = faster.</p>
+    </section>
+
+    <hr class="perf" aria-hidden="true">
+
+    <!-- Footer -->
+    <footer class="receipt-foot">
+      <p>*** THANK YOU ***</p>
+      <div class="barcode" role="img" aria-label="Decorative barcode"></div>
+      <p>CAGRIEFE.COM</p>
+      <p class="fine">NO REFUNDS · REPRINT ANYTIME</p>
+    </footer>
+  </main>
+  <div class="tear" aria-hidden="true"></div>
+
+  <p class="colophon">STATIC HTML + CSS · NO TRACKERS</p>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
