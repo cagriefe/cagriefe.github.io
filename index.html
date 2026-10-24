@@ -66,6 +66,7 @@
             <h2>About</h2>
             <p class="lead">Software engineer and Project Lead for the XLR Platform at Encore, an NCR Voyix partner. I ship next-gen point-of-sale rollouts for Turkey's largest retailers — Migros, CarrefourSA and Gratis.</p>
             <p>Most of my work happens where software meets the store floor: .NET services on self-checkout lanes, payment and fiscal device layers, edge Kubernetes clusters running in the back office, and the telemetry that tells us when any of it breaks.</p>
+            <p>After hours I build products end to end: a live storefront and quoting system for an HVAC dealer, a self-running short-video studio on a home Kubernetes cluster, and iOS apps for the road and for fun.</p>
           </section>
 
           <section class="stats" aria-label="Highlights">
@@ -127,29 +128,127 @@
 
           <section id="projects" class="block">
             <h2>Projects</h2>
+            <p class="section-intro">Things I've designed, built and shipped — from store-floor infrastructure to products running on the open web.</p>
+
+            <h3 class="subhead">Built &amp; shipped</h3>
             <div class="grid">
               <article class="project">
-                <div class="project-icon" aria-hidden="true">S</div>
-                <h3>Sentinel Telemetry</h3>
-                <p class="project-tag">2024–26</p>
-                <p>Sidecar service for 6,000+ live devices. Events journaled in SQLite, retried via outbox, watched by dead-letter monitors.</p>
-                <ul class="tags"><li>.NET 9</li><li>SQLite</li><li>Docker</li><li>Helm</li><li>MSI</li></ul>
+                <div class="project-top">
+                  <div class="project-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 10.5 12 4l9 6.5M5 9v11h14V9M9 20v-6h6v6"/></svg></div>
+                  <span class="status status-live"><span class="dot"></span>Live</span>
+                </div>
+                <h3>Ahmet Efe Yapı</h3>
+                <p class="project-tag">HVAC storefront · 2026</p>
+                <p>A bilingual product showroom for an authorized Vaillant dealer, covering boilers, air conditioners and heat pumps across Turkey. The whole catalogue lives in a single Excel sheet the business already knows how to edit; a build step compiles it into static JSON, so the site ships as pure files with no server, no database and nothing to break.</p>
+                <ul class="tags"><li>Next.js</li><li>Tailwind v4</li><li>next-intl</li><li>Zustand</li><li>Static export</li></ul>
+                <a class="project-link" href="https://www.ahmetefeyapi.com" target="_blank" rel="noopener">ahmetefeyapi.com ↗</a>
               </article>
+
               <article class="project">
-                <div class="project-icon" aria-hidden="true">E</div>
-                <h3>EFT + Fiscal Interface</h3>
-                <p class="project-tag">2024–26</p>
-                <p>One hardware layer between POS logic and payment/fiscal devices. New terminal, no checkout rewrite.</p>
-                <ul class="tags"><li>.NET 8</li><li>C#</li><li>FLPOS</li></ul>
+                <div class="project-top">
+                  <div class="project-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3h7l5 5v13H7zM14 3v5h5M10 13h6M10 17h4"/></svg></div>
+                  <span class="status status-live"><span class="dot"></span>In daily use</span>
+                </div>
+                <h3>Teklif Wizard</h3>
+                <p class="project-tag">Internal B2B quoting &amp; CRM · 2026</p>
+                <p>The back office behind the storefront. Builds multi-option price quotes from a live price list, numbers them per year, and turns every saved quote into a customer record — then follows the job through payments, balances and invoicing. Excel-style column filters, Turkish-aware search, and tables that fold into cards on a phone.</p>
+                <ul class="tags"><li>Node.js</li><li>Vercel serverless</li><li>Postgres</li><li>Vanilla JS</li></ul>
               </article>
+
               <article class="project">
-                <div class="project-icon" aria-hidden="true">D</div>
+                <div class="project-top">
+                  <div class="project-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM12 3v9l6 3M3 12h3M12 18v3"/></svg></div>
+                  <span class="status">Capstone</span>
+                </div>
                 <h3>Draw Machine</h3>
-                <p class="project-tag">Side project · 2024</p>
-                <p>Optimizes Champions League–style draws under constraint rules. SwiftUI up front, integer programming behind.</p>
-                <ul class="tags"><li>SwiftUI</li><li>FastAPI</li><li>Gurobi</li></ul>
+                <p class="project-tag">Champions League draw optimizer · 2024</p>
+                <p>Models the new 36-team league-phase format as an integer program: every club gets eight opponents across four pots, with country clashes and home/away balance enforced as hard constraints. Gurobi finds a valid draw; ClubElo ratings feed fairness benchmarks; a SwiftUI app plays it out live.</p>
+                <ul class="tags"><li>Gurobi</li><li>FastAPI</li><li>PostgreSQL</li><li>Alembic</li><li>Firebase Auth</li><li>SwiftUI</li></ul>
+                <a class="project-link" href="https://github.com/cagriefe/ChampionsLeagueCapstone" target="_blank" rel="noopener">View on GitHub ↗</a>
+              </article>
+
+              <article class="project">
+                <div class="project-top">
+                  <div class="project-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 14h4v4H4zM8 14h4v4H8zM12 10h4v4h-4zM12 14h4v4h-4zM16 6h4v4h-4z"/></svg></div>
+                  <span class="status">iOS</span>
+                </div>
+                <h3>Flotrix</h3>
+                <p class="project-tag">Neon puzzle game · 2025</p>
+                <p>A modern take on the classic falling-blocks puzzle for iPhone and iPad. Neon visuals, smooth animations, hold and ghost pieces, combos and guideline-accurate scoring, with touch controls tuned until hard drops feel instant.</p>
+                <ul class="tags"><li>Swift</li><li>iOS</li><li>iPadOS</li><li>Game design</li></ul>
+                <a class="project-link" href="flotrix/game/">Game guide ↗</a>
               </article>
             </div>
+
+            <h3 class="subhead">In the lab</h3>
+            <div class="grid">
+              <article class="project">
+                <div class="project-top">
+                  <div class="project-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM4 9h16M8 5l2 4M13 5l2 4M10 12v5l4-2.5z"/></svg></div>
+                  <span class="status status-wip"><span class="dot"></span>In progress</span>
+                </div>
+                <h3>Klipr</h3>
+                <p class="project-tag">Autonomous short-video studio · 2026</p>
+                <p>A self-healing pipeline that turns long YouTube videos into ready-to-post Shorts, Reels and TikToks with zero manual steps. It finds the source, transcribes it with Whisper, lets a local LLM pick the hook, locks onto the streamer's facecam with computer vision, renders a 9:16 cut with burned-in captions and publishes it. Everything runs on a spare home PC under Kubernetes, no paid SaaS.</p>
+                <ul class="tags"><li>k3s</li><li>Docker</li><li>faster-whisper</li><li>Ollama · Qwen 2.5</li><li>OpenCV</li><li>FFmpeg</li><li>yt-dlp</li></ul>
+              </article>
+
+              <article class="project">
+                <div class="project-top">
+                  <div class="project-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 16a7 7 0 1 1 14 0M12 16l4-5M3 20h18"/></svg></div>
+                  <span class="status status-wip"><span class="dot"></span>In progress</span>
+                </div>
+                <h3>PlayCar</h3>
+                <p class="project-tag">CarPlay-style dashboard for iPhone · 2026</p>
+                <p>A landscape, dark-mode driving cockpit: live map with traffic and 3D heading on the left, speedometer, media controls and trip telemetry on the right. Built to survive real roads and App Store review — real km/h from raw GPS, MapKit traffic through UIKit, and the system volume and AirPlay controls instead of fragile fakes.</p>
+                <ul class="tags"><li>SwiftUI</li><li>MapKit</li><li>Core Location</li><li>MediaPlayer</li><li>iOS 17</li></ul>
+              </article>
+            </div>
+
+            <h3 class="subhead">At work</h3>
+            <div class="grid">
+              <article class="project">
+                <div class="project-top">
+                  <div class="project-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></div>
+                  <span class="status status-live"><span class="dot"></span>In production</span>
+                </div>
+                <h3>Sentinel Telemetry</h3>
+                <p class="project-tag">Encore · 2024–26</p>
+                <p>A sidecar that keeps watch over 6,000+ live store devices. Every event is journaled to SQLite first and shipped through a transactional outbox, so a flaky store link never loses data, and dead-letter monitors flag anything that refuses to sync.</p>
+                <ul class="tags"><li>.NET 9</li><li>SQLite</li><li>Docker</li><li>Helm</li><li>MSI</li></ul>
+              </article>
+
+              <article class="project">
+                <div class="project-top">
+                  <div class="project-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 6h18v12H3zM3 10h18M7 15h3"/></svg></div>
+                  <span class="status status-live"><span class="dot"></span>In production</span>
+                </div>
+                <h3>EFT + Fiscal Interface</h3>
+                <p class="project-tag">Encore · 2024–26</p>
+                <p>One clean hardware layer between checkout logic and the payment and fiscal devices underneath it — Ingenico, Verifone, Pavo. Plug in a new terminal, and not a single line of checkout code has to change.</p>
+                <ul class="tags"><li>.NET 8</li><li>C#</li><li>FLPOS</li></ul>
+              </article>
+            </div>
+
+            <h3 class="subhead">More experiments</h3>
+            <ul class="mini-list">
+              <li>
+                <a href="https://github.com/cagriefe/algorithmic-trading" target="_blank" rel="noopener">Algorithmic Trading</a>
+                <span>Crypto signal engine for Binance: swing structure, breakouts, RSI/MACD/ADX and chart-pattern recognition.</span>
+              </li>
+              <li>
+                <a href="https://github.com/cagriefe/PriceOracle" target="_blank" rel="noopener">PriceOracle</a>
+                <span>Bitcoin price forecasting with a GRU network in PyTorch, from data fetch to evaluation.</span>
+              </li>
+              <li>
+                <a href="https://github.com/cagriefe/Disease-Prediction-Using-Machine-Learning" target="_blank" rel="noopener">Disease Prediction</a>
+                <span>Ensemble of SVC, Naive Bayes and Random Forest over 132 symptoms, with BioGPT-drafted treatment plans.</span>
+              </li>
+              <li>
+                <span class="mini-title">AdBlocker for iOS</span>
+                <span>Safari content blocker plus encrypted DNS for system-wide ad and tracker blocking, in English and Turkish.</span>
+              </li>
+            </ul>
           </section>
 
           <section id="skills" class="block">
